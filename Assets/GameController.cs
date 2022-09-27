@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
     private TextMeshProUGUI textTapToPlay;
 
     [SerializeField]
-    private TextMeshProUGUI textCointCount;
+    private TextMeshProUGUI textCoinCount;
     private int coinCount = 0;
 
     public bool IsGameStart { private set; get; }
@@ -23,7 +23,7 @@ public class GameController : MonoBehaviour
 
         textTitle.enabled = true;
         textTapToPlay.enabled = true;
-        textCointCount.enabled = false;
+        textCoinCount.enabled = false;
     }
 
     private IEnumerator Start()
@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour
 
                 textTitle.enabled = false;
                 textTapToPlay.enabled = false;
-                textCointCount.enabled = true;
+                textCoinCount.enabled = true;
 
                 break;
             }
@@ -47,7 +47,7 @@ public class GameController : MonoBehaviour
     public void IncreaseCoinCount()
     {
         coinCount++;
-        textCointCount.text = coinCount.ToString();
+        textCoinCount.text = coinCount.ToString();
     }
 
     public void GameOver()
